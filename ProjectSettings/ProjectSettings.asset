@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 8b395b31a625c416d8849971b8806de7
+  productGUID: 2aa56cb2ca64e0d45bc27eaa6a12a230
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Fragments
+  productName: Fragment
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -629,14 +629,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Fragments
+  metroPackageName: Fragment
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Fragments
+  metroApplicationDescription: Fragment
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -705,11 +705,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 5963b642-c1f0-4a7f-817d-9a7198f48c0e
+  cloudProjectId: 3426c270-30cc-49dc-aa55-4d7bfd8e8b31
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Fragments
-  organizationId: unity_dxrtegwddchfqq
+  projectName: Fragment
+  organizationId: daguguguji18
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
