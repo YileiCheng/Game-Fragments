@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Inventory inventory;
 
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
 
     Vector2 velocity;
-    
+
+    //private void Awake()
+    //{
+    //    inventory = new Inventory(5);
+    //    Debug.Log("new invenrory");
+    //}
+
     // Start is called before the first frame update
     void Start()
     {
+        inventory = new Inventory(5);
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemCollection : MonoBehaviour
 {
     // Start is called before the first frame update
+    public CollectableType type;
+    public Sprite icon;
     void Start()
     {
         
@@ -19,9 +21,15 @@ public class ItemCollection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("here");
-        if (collision.gameObject.CompareTag("Player"))
+        Player player = collision.GetComponent<Player>();
+        if (player)
         {
-            gameObject.SetActive(false);
+            player.inventory.Add(this);
+            Destroy(this.gameObject);
         }
+        //if (collision.gameObject.CompareTag("Player"))
+        //{
+        //    gameObject.SetActive(false);
+        //}
     }
 }
