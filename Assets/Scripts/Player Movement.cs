@@ -11,13 +11,8 @@ public class Player : MonoBehaviour
 
     Vector2 velocity;
 
-    //private void Awake()
-    //{
-    //    inventory = new Inventory(5);
-    //    Debug.Log("new invenrory");
-    //}
+    public Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
         inventory = new Inventory(5);
@@ -28,26 +23,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*velocity = Vector2.zero;
+        velocity = Vector2.zero;
         velocity.x = Input.GetAxisRaw("Horizontal");
         velocity.y = Input.GetAxisRaw("Vertical");
-        Debug.Log(velocity);*/
-        float directionX = Input.GetAxisRaw("Horizontal");
-        float directionY = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(directionX * 2f, directionY * 2f);
+
+        UpdateAnimation();
     }
 
-    /*void FixedUpdate()
+    void UpdateAnimation()
+    {
+        if (velocity != Vector2.zero)
+        {
+            UpdateMovement();
+
+            animator.SetBool("Walking", true);
+            animator.SetFloat("Horizontal", velocity.x);
+            animator.SetFloat("Vertical", velocity.y);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
+    }
+
+    void UpdateMovement()
     {
         rb.MovePosition(rb.position + velocity * moveSpeed * Time.fixedDeltaTime);
-    }*/
-    
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("here");
-        if (collision.gameObject.CompareTag("Fragment"))
-        {
-            collision.gameObject.SetActive(false);
-        }
     }
 }
