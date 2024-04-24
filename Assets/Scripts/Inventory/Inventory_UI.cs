@@ -45,7 +45,7 @@ public class Inventory_UI : MonoBehaviour
         {
             for (int i = 0; i < slots_UIs.Count; i++)
             {
-                if (player.inventory.slots[i].type != CollectableType.NONE)
+                if (player.inventory.slots[i].item != null)
                 {
                     slots_UIs[i].setItem(player.inventory.slots[i]);
                 }

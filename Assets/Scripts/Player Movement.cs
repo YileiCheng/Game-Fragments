@@ -11,11 +11,54 @@ public class Player : MonoBehaviour
 
     Vector2 velocity;
 
-    //private void Awake()
-    //{
-    //    inventory = new Inventory(5);
-    //    Debug.Log("new invenrory");
-    //}
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+
+        SaveSystem.LoadPlayer(this);
+        //if (data != null) // Make sure data is not null
+        //{
+        //    if (inventory != null && data.inventory != null) // Check both inventories are not null
+        //    {
+        //        inventory = data.inventory;
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("Inventory data is null.");
+        //    }
+
+        //    // Check if the position data is not null and has the correct length
+        //    if (data.position != null && data.position.Length == 3)
+        //    {
+        //        Vector3 position;
+        //        position.x = data.position[0];
+        //        position.y = data.position[1];
+        //        position.z = data.position[2];
+        //        transform.position = position;
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("Position data is null or incorrect.");
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.LogError("Player data is null.");
+        //}
+
+        //PlayerData data = SaveSystem.LoadPlayer();
+
+        //inventory = data.inventory;
+        //Vector3 position;
+        //position.x = data.position[0];
+        //position.y = data.position[1];
+        //position.z = data.position[2];
+        //transform.position = position;
+    }
 
     // Start is called before the first frame update
     void Start()

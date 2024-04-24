@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[System.Serializable]
 public enum CollectableType
 {
-    NONE, COIN, FOOD, EGG, RING
+    NONE, COIN, FOOD, EGG, RING, SEED
 }
 
 [System.Serializable]
@@ -15,15 +15,14 @@ public class Inventory
     [System.Serializable]
     public class Slot
     {
-        public CollectableType type;
+        public Item item;
         public int count;
         public int maxAllowed;
 
-        public Sprite icon;
 
         public Slot()
         {
-            type = CollectableType.NONE;
+            item = null;
             count = 0;
             maxAllowed = 99;
         }
@@ -35,10 +34,9 @@ public class Inventory
             }
             return false;
         }
-        public void addItem(ItemCollection item)
+        public void addItem(Item item)
         {
-            this.type = item.type;
-            this.icon = item.icon;
+            this.item = item;
             count++;
         }
     }
@@ -54,14 +52,23 @@ public class Inventory
         }
     }
 
-    public void Add(ItemCollection token)
+    public Inventory()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Slot slot = new Slot();
+            slots.Add(slot);
+        }
+    }
+
+    public void Add(ItemCollection itemc)
     {
         foreach(Slot slot in slots)
         {
             // if < maxallowed
-            if (slot.type == CollectableType.NONE)
+            if (slot.item == null)
             {
-                slot.addItem(token);
+                slot.addItem(itemc.item);
                 return;
             }
         }

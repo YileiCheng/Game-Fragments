@@ -14,14 +14,15 @@ public class Slots_UI : MonoBehaviour
     {
         if (slot != null)
         {
-            itemIcon.sprite = slot.icon;
-            
+            itemIcon.sprite = slot.item.icon;
+            itemIcon.color = new Color(1, 1, 1, 1);
         }
     }
 
     public void SetEmpty()
     {
         itemIcon.sprite = null;
+        itemIcon.color = new Color(1, 1, 1, 0);
     }
 
 }
