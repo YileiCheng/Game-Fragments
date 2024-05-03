@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fragment
+  - NPC_Interactor
+  - DialogueBox
+  - NPC
   layers:
   - Default
   - TransparentFX
