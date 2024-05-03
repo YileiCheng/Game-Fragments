@@ -5,12 +5,18 @@ using UnityEngine;
 [System.Serializable]
 public enum CollectableType
 {
-    NONE, COIN, FOOD, EGG, RING, SEED
+    NONE, COIN, FOOD, EGG, RING, ICECREAN
 }
 
 [System.Serializable]
 public class Inventory
 {
+
+    void Start()
+    {
+        //Load all Item objects from the Resources/Items folder
+
+    }
 
     [System.Serializable]
     public class Slot
@@ -61,14 +67,34 @@ public class Inventory
         }
     }
 
-    public void Add(ItemCollection itemc)
+    public void AddfromCollection(ItemCollection itemc)
     {
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
             // if < maxallowed
             if (slot.item == null)
             {
                 slot.addItem(itemc.item);
+                return;
+            }
+        }
+    }
+
+    public void AddfromType(CollectableType itemType)
+    {
+        foreach (Slot slot in slots)
+        {
+            // if < maxallowed
+            if (slot.item == null)
+            {
+                foreach (Item item in AllItems.Instance.allItems)
+                {
+                    if (item.type == itemType)
+                    {
+                        slot.addItem(item);
+                        break;
+                    }
+                }
                 return;
             }
         }

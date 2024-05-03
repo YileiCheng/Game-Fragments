@@ -8,11 +8,11 @@ public class ItemCollection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("here");
+        //Debug.Log("here");
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            player.inventory.Add(this);
+            player.inventory.AddfromCollection(this);
             Destroy(this.gameObject);
         }
 
