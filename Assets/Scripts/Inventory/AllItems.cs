@@ -41,7 +41,7 @@ public class AllItems : MonoBehaviour
     void Update()
     {
         // Example: press E to get icecream
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject playerGameObject = GameObject.Find("Player");
             if (playerGameObject != null)
