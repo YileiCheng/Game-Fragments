@@ -12,11 +12,13 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textDia;
     public float textSpeed;
     public Queue<string> sentences;
-    
+
+    public bool isDialogueActive = false;
+
     private int diaCount;
     private string currentSentence;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +87,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-       
         dialogueBox.SetActive(true);
         name.text = dialogue.name;
         Debug.Log("starting conversation with: " + dialogue.name);
@@ -129,7 +130,6 @@ public class DialogueManager : MonoBehaviour
 
     void EndConversation()
     {
-        
         dialogueBox.SetActive(false);
     }
 

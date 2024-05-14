@@ -41,15 +41,15 @@ public class AllItems : MonoBehaviour
     void Update()
     {
         // Example: press E to get icecream
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GameObject playerGameObject = GameObject.Find("Player");
-            if (playerGameObject != null)
-            {
-                Player player = playerGameObject.GetComponent<Player>();
-                player.inventory.AddfromType(CollectableType.ICECREAN);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    GameObject playerGameObject = GameObject.Find("Player");
+        //    if (playerGameObject != null)
+        //    {
+        //        Player player = playerGameObject.GetComponent<Player>();
+        //        player.inventory.AddfromType(CollectableType.Icecream);
+        //    }
+        //}
 
     }
 }
