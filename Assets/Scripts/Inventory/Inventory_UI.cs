@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Inventory_UI : MonoBehaviour
 {
-
+    Color visible = new Color(1, 1, 1, 1);
+    Color invisible = new Color(1, 1, 1, 0);
     public GameObject inventoryPanel;
 
     public Player player;
@@ -60,6 +61,9 @@ public class Inventory_UI : MonoBehaviour
             if (Input.GetKeyDown(keyCodes[i])) 
             {
                 Debug.Log("press"+i);
+
+
+
                 if (selectedTag == i) 
                 {
                     ToggleSelectBox(slots_UIs[i].selectBox);
@@ -72,24 +76,32 @@ public class Inventory_UI : MonoBehaviour
                         setInvisible(slots_UIs[selectedTag].selectBox);
                     }
                     ToggleSelectBox(slots_UIs[i].selectBox); 
-                    selectedTag = i; 
+                    selectedTag = i;
+
+                }
+                if (slots_UIs[i].selectBox.color == visible && player.inventory.slots[i].item != null)
+                {
+
+                    DialogueManagerNew dia = FindObjectOfType<DialogueManagerNew>();
+                    dia.updateSelectItem(i);
+                    Debug.Log("select" + i);
+
                 }
                 break; 
             }
-        }
 
+        }
 
     }
 
     public void setInvisible(Image image)
     {
-        image.color = new Color(1, 1, 1, 0);
+        image.color = invisible;
     }
 
     public void ToggleSelectBox(Image image)
     {
-        Color visible = new Color(1, 1, 1, 1);
-        Color invisible = new Color(1, 1, 1, 0);
+
         image.color = image.color == visible ? invisible : visible;
     }
 

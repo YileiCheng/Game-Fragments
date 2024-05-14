@@ -12,12 +12,6 @@ public enum CollectableType
 public class Inventory
 {
 
-    void Start()
-    {
-        //Load all Item objects from the Resources/Items folder
-
-    }
-
     [System.Serializable]
     public class Slot
     {
@@ -47,13 +41,13 @@ public class Inventory
         }
     }
 
-    public List<Slot> slots = new List<Slot>();
+    public List<Slot> slots = new();
 
     public Inventory(int numSlots)
     {
         for(int i=0; i< numSlots; i++)
         {
-            Slot slot = new Slot();
+            Slot slot = new();
             slots.Add(slot);
         }
     }
@@ -62,7 +56,7 @@ public class Inventory
     {
         for (int i = 0; i < 5; i++)
         {
-            Slot slot = new Slot();
+            Slot slot = new();
             slots.Add(slot);
         }
     }
@@ -78,6 +72,11 @@ public class Inventory
                 return;
             }
         }
+    }
+
+    public Item GetItemfromKey(int key)
+    {
+        return slots[key].item;
     }
 
     public void AddfromItem(Item item)

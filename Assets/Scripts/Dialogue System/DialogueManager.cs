@@ -5,7 +5,7 @@ using TMPro;
 
 // code from: https://www.youtube.com/watch?v=8oTYabhj248
 
-public class DialogueManager : EventManager
+public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueBox;
     public TextMeshProUGUI name;
@@ -85,7 +85,7 @@ public class DialogueManager : EventManager
         }
     }
 
-    public override void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         dialogueBox.SetActive(true);
         name.text = dialogue.name;

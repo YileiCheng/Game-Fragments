@@ -10,7 +10,6 @@ public class Decision : Event
     public List<Dialogue> dialogueAfterYesDecision;
     public List<Dialogue> dialogueAfterNoDecision;
     private DialogueManagerNew manager;
-    //public Dialogue dialogueAfterDecision;
     private int nextSeq;
     private NPCInteraction interaction;
 

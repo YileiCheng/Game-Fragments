@@ -18,10 +18,15 @@ public class DialogueManagerNew : MonoBehaviour
     private bool isDialogueRunning = false;
 
     public GameObject decisionPanel;
+    public GameObject inventory;
     public Button yesButton;
     public Button noButton;
+
+    private SubmitItem currentSubmission;
     private Decision currentDecision;
     private bool whileDecision;
+    private bool whileSubmission;
+    private int selectItem = -1;
 
     void Start()
     {
@@ -38,6 +43,8 @@ public class DialogueManagerNew : MonoBehaviour
         textDia.text = string.Empty;
 
         whileDecision = false;
+        whileSubmission = false;
+
         decisionPanel.SetActive(false);
         yesButton.onClick.AddListener(OnYesButtonClicked);
         noButton.onClick.AddListener(OnNoButtonClicked);
@@ -69,24 +76,57 @@ public class DialogueManagerNew : MonoBehaviour
 
     private void OnYesButtonClicked()
     {
-        decisionPanel.SetActive(false);
-        whileDecision = false;
-        if (currentDecision != null)
+        if (whileSubmission)
         {
-            NextLine();
-            currentDecision.OnDecisionMade(true);
+            inventory.SetActive(false);
+            decisionPanel.SetActive(false);
+            whileDecision = false;
+            whileSubmission = false;
+
+            if (currentSubmission != null)
+            {
+                NextLine();
+                currentSubmission.OnDecisionMade(true, selectItem);
+            }
         }
+        else
+        {
+            decisionPanel.SetActive(false);
+            whileDecision = false;
+            if (currentDecision != null)
+            {
+                NextLine();
+                currentDecision.OnDecisionMade(true);
+            }
+        }
+
     }
 
     private void OnNoButtonClicked()
     {
-        decisionPanel.SetActive(false);
-        whileDecision = false;
-        if (currentDecision != null)
+        if (whileSubmission)
         {
-            NextLine();
-            currentDecision.OnDecisionMade(false);
+            inventory.SetActive(false);
+            whileSubmission = false;
+            decisionPanel.SetActive(false);
+            whileDecision = false;
+            if (currentSubmission != null)
+            {
+                NextLine();
+                currentSubmission.OnDecisionMade(false, -1);
+            }
         }
+        else
+        {
+            decisionPanel.SetActive(false);
+            whileDecision = false;
+            if (currentDecision != null)
+            {
+                NextLine();
+                currentDecision.OnDecisionMade(false);
+            }
+        }
+
     }
 
     public void StartDecision(Decision decisionEvent)
@@ -94,7 +134,15 @@ public class DialogueManagerNew : MonoBehaviour
         currentDecision = decisionEvent;
         dialogueQueue.Enqueue(currentDecision.dialogueWhileDecision);
         whileDecision = true;
-        currentDecision = decisionEvent;
+    }
+
+    public void StartSubmission(SubmitItem submitItem)
+    {
+        currentSubmission = submitItem;
+        dialogueQueue.Enqueue(currentSubmission.dialogueWhileSubmission);
+        whileDecision = true;
+        whileSubmission = true;
+
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -123,6 +171,10 @@ public class DialogueManagerNew : MonoBehaviour
         }
         else if (whileDecision)
         {
+            if (whileSubmission)
+            {
+                inventory.SetActive(true);
+            }
             decisionPanel.SetActive(true);
         }
         else
@@ -165,5 +217,10 @@ public class DialogueManagerNew : MonoBehaviour
     void EndConversation()
     {
         ProcessNextDialogue();
+    }
+       
+    public void updateSelectItem(int key)
+    {
+        selectItem = key;
     }
 }

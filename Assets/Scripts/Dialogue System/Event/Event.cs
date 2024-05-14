@@ -15,24 +15,11 @@ public abstract class Event
     }
 
     public EventType Type { get; private set; }
-
+    //public int nextEventIndex;
     protected Event(EventType type)
     {
         Type = type;
     }
     public abstract void Execute(int seq, DialogueManagerNew dialogueManager, NPCInteraction npcInteraction);
-
-    //Event nextEvent;
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 
 }
