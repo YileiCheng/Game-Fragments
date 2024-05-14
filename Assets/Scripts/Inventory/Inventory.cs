@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public enum CollectableType
 {
-    NONE, COIN, FOOD, EGG, RING, ICECREAN
+    NONE, COIN, FOOD, EGG, RING, Icecream
 }
 
 [System.Serializable]
@@ -75,6 +75,19 @@ public class Inventory
             if (slot.item == null)
             {
                 slot.addItem(itemc.item);
+                return;
+            }
+        }
+    }
+
+    public void AddfromItem(Item item)
+    {
+        foreach (Slot slot in slots)
+        {
+            // if < maxallowed
+            if (slot.item == null)
+            {
+                slot.addItem(item);
                 return;
             }
         }

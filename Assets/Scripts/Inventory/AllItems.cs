@@ -47,7 +47,7 @@ public class AllItems : MonoBehaviour
             if (playerGameObject != null)
             {
                 Player player = playerGameObject.GetComponent<Player>();
-                player.inventory.AddfromType(CollectableType.ICECREAN);
+                player.inventory.AddfromType(CollectableType.Icecream);
             }
         }
 

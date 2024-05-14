@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d72fb65a4c4004940b933932aef88aba, type: 3}
-  m_Name: Icecream
+  m_Name: Dog
   m_EditorClassIdentifier: 
-  type: 5
-  icon: {fileID: 1865690100, guid: 79214d51411b04fc385e47223055e713, type: 3}
+  type: 0
+  icon: {fileID: 0}
