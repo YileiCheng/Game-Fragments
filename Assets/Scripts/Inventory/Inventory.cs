@@ -39,6 +39,11 @@ public class Inventory
             this.item = item;
             count++;
         }
+        public void removeItem()
+        {
+            this.item = null;
+            //count;
+        }
     }
 
     public List<Slot> slots = new();
@@ -78,6 +83,11 @@ public class Inventory
     {
         return slots[key].item;
     }
+    public void RemoveItemfromKey(int key)
+    {
+        slots[key].removeItem();
+    }
+
 
     public void AddfromItem(Item item)
     {

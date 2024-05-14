@@ -49,8 +49,9 @@ public class SubmitItem : Event
                     foreach (Dialogue dialogue in dialoguewithPassing)
                     {
                         manager.StartDialogue(dialogue);
-                        interaction.UpdateSeq(nextSeq + 1);
                     }
+                    interaction.UpdateSeq(nextSeq + 1);
+                    player.inventory.RemoveItemfromKey(index);
                 }
                 else
                 {
