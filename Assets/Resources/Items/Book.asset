@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d72fb65a4c4004940b933932aef88aba, type: 3}
-  m_Name: Dog
+  m_Name: Book
   m_EditorClassIdentifier: 
-  type: 7
-  icon: {fileID: -1716998945, guid: 0e1a2332282674baa8e81e1249b07fef, type: 3}
+  type: 6
+  icon: {fileID: 21300000, guid: bc88aa19def94428cbebcfc590ddacb5, type: 3}

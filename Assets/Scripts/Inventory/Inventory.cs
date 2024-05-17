@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public enum CollectableType
 {
-    NONE, COIN, FOOD, EGG, RING, Icecream
+    NONE, COIN, FOOD, EGG, RING, Icecream, Book, Dog
 }
 
 [System.Serializable]

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReceiveItem : Event
 {
+    public List<Dialogue> dialogueBeforeReceiving;
     public Dialogue dialogueWhenReceiving;
     public Item item;
     public ReceiveItem() : base(EventType.ReceiveItemEvent)
@@ -12,7 +13,10 @@ public class ReceiveItem : Event
 
     public override void Execute(int seq, DialogueManagerNew dialogueManager, NPCInteraction npcInteraction)
     {
-
+        foreach (Dialogue dialogue in dialogueBeforeReceiving)
+        {
+            dialogueManager.StartDialogue(dialogue);
+        }
         dialogueManager.StartDialogue(this.dialogueWhenReceiving);
 
         GameObject playerGameObject = GameObject.Find("Player");
