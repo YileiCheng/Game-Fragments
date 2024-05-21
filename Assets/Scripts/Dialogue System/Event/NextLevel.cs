@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,18 +8,17 @@ public class NextLevel : Event
 {
     public List<Dialogue> dialogueBeforeDecision;
 
-    public Dialogue dialogueFirstDecision;
-    public List<Dialogue> dialogueAfterFirstYesDecision;
-    public List<Dialogue> dialogueAfterFirstNoDecision;
+    public Dialogue dialogueMoreThen2;
+    public Dialogue dialogueEqualTo2;
+    public Dialogue dialogueLessThen2;
 
-    public Dialogue dialogueSecondDecision;
-    public List<Dialogue> dialogueAfterSecondYesDecision;
-    public List<Dialogue> dialogueAfterSecondNoDecision;
-    
+    public Decision WhetherNextLevel;
+    public SubmitItem removeItem;
+
     private DialogueManagerNew manager;
     private int nextSeq;
     private NPCInteraction interaction;
-    private bool firstDecisionMade = false;
+    //public bool firstDecisionMade = false;
 
     public NextLevel() : base(EventType.Nextlevel) { }
 
@@ -29,50 +29,33 @@ public class NextLevel : Event
 
         manager = dialogueManager;
 
-        foreach (Dialogue dialogue in dialogueBeforeDecision)
+        manager.addDialogueList(dialogueBeforeDecision);
+
+        GameObject playerGameObject = GameObject.Find("Player");
+        if (playerGameObject != null)
         {
-            manager.StartDialogue(dialogue);
+            Player player = playerGameObject.GetComponent<Player>();
+
+
+            if (player.inventory.Counts() == 2)
+            {
+                manager.StartDialogue(dialogueEqualTo2);
+                WhetherNextLevel.Execute(seq, manager, interaction);
+
+            }
+            else if (player.inventory.Counts() >= 3)
+            {
+                manager.StartDialogue(dialogueMoreThen2);
+                removeItem.Execute(seq, manager, interaction);
+            }
+            else
+            {
+                manager.StartDialogue(dialogueLessThen2);
+
+            }
         }
-        manager.StartDialogue(dialogueFirstDecision);
+
     }
 
-    public void OnFirstDecisionMade(bool decision)
-    {
-        if (decision)
-        {
-            firstDecisionMade = true;
-            foreach (Dialogue dialogue in dialogueAfterFirstYesDecision)
-            {
-                manager.StartDialogue(dialogue);
-                manager.StartDialogue(dialogueSecondDecision);
-                manager.StartNextLevel(this);
-            }
-        }
-        else
-        {
-            foreach (Dialogue dialogue in dialogueAfterFirstNoDecision)
-            {
-                manager.StartDialogue(dialogue);
-            }
-        }
-    }
 
-    private void OnSecondDecisionMade(bool decision)
-    {
-        if (decision)
-        {
-            foreach (Dialogue dialogue in dialogueAfterSecondYesDecision)
-            {
-                manager.StartDialogue(dialogue);
-                interaction.UpdateSeq(nextSeq + 1);
-            }
-        }
-        else
-        {
-            foreach (Dialogue dialogue in dialogueAfterSecondNoDecision)
-            {
-                manager.StartDialogue(dialogue);
-            }
-        }
-    }
 }

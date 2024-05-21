@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public enum CollectableType
 {
-    NONE, COIN, FOOD, EGG, RING, Icecream, Book, Dog
+    NONE, Coin, Food, Egg, Ring, Icecream, Book, Dog
 }
 
 [System.Serializable]
@@ -120,5 +120,18 @@ public class Inventory
                 return;
             }
         }
+    }
+
+    public int Counts()
+    {
+        int itemCount = 0;
+        foreach (Slot slot in slots)
+        {
+            if (slot.item != null)
+            {
+                itemCount++;
+            }
+        }
+        return itemCount;
     }
 }

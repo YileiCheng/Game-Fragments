@@ -1137,7 +1137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &207337280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1271,7 +1271,7 @@ Transform:
   m_GameObject: {fileID: 207337279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.2, y: -0.37, z: 0.009168929}
+  m_LocalPosition: {x: -2.434, y: -4.895, z: 0.009168929}
   m_LocalScale: {x: 0.082130745, y: 0.073512584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3103,6 +3103,7 @@ MonoBehaviour:
           - Anyway, thank you for trying.
           name: 'Lady:'
         itemRequired: {fileID: 11400000, guid: 30359edd8afd9b14db983a730a5d04d0, type: 2}
+        remove: 0
 --- !u!1 &390022127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,6 +3713,127 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1419083074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &455178368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1419083074}
+    m_Modifications:
+    - target: {fileID: 169288187213658989, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 169288187213658989, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: ... here, it's on me today, take it easy man.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073499789269533456, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f776e2e9690501e41a2e5b81ceb440b9, type: 3}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.188888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.188888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409081650443062152, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_Name
+      value: Ranger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 169288187213658989, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1067504475}
+  m_SourcePrefab: {fileID: 100100000, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
 --- !u!1 &481173437
 GameObject:
   m_ObjectHideFlags: 0
@@ -7803,12 +7925,18 @@ MonoBehaviour:
         dialoguewithWrongItem:
         - sentences:
           - wrong
-          name: 
+          - wrong
+          name: B
+        - sentences:
+          - wrong
+          - wrong
+          name: A
         dialogueWithoutSubmitting:
         - sentences:
           - no
           name: 
         itemRequired: {fileID: 11400000, guid: d0e9029549fbec742bd4b1b5219b1040, type: 2}
+        remove: 0
 --- !u!1 &883997484
 GameObject:
   m_ObjectHideFlags: 0
@@ -8788,7 +8916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &993819677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8922,7 +9050,7 @@ Transform:
   m_GameObject: {fileID: 993819676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.45, y: -0.35, z: 0.009168929}
+  m_LocalPosition: {x: -2.214, y: -4.888, z: 0.009168929}
   m_LocalScale: {x: 0.0706, y: 0.0649, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9099,7 +9227,7 @@ Transform:
   m_GameObject: {fileID: 996761499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.076, y: -6.257, z: -2.65}
+  m_LocalPosition: {x: -0.079, y: -7.241, z: -2.65}
   m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9400,11 +9528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.857
+      value: 3.082
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.861
+      value: -5.144
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9472,7 +9600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_Name
-      value: Test
+      value: submit
       objectReference: {fileID: 0}
     - target: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_IsActive
@@ -9892,7 +10020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1042713919
 Transform:
   m_ObjectHideFlags: 0
@@ -9902,7 +10030,7 @@ Transform:
   m_GameObject: {fileID: 1042713918}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1518116, y: 0.18292975, z: 0.009168929}
+  m_LocalPosition: {x: -2.76, y: -4.908, z: 0.009168929}
   m_LocalScale: {x: 0.058243588, y: 0.06116653, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10487,6 +10615,137 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000019073, y: -0.0000027344}
   m_SizeDelta: {x: 11.9946, y: 12.0706}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1067504473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+  m_PrefabInstance: {fileID: 455178368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1067504474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
+  m_PrefabInstance: {fileID: 455178368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1067504475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067504473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5645552b47809bc49b67661df8b8e99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - rid: 7610262513221107721
+  - rid: 7610262513221107720
+  dialogue:
+    sentences: []
+    name: 
+  references:
+    version: 2
+    RefIds:
+    - rid: 7610262513221107720
+      type: {class: NextLevel, ns: , asm: Assembly-CSharp}
+      data:
+        dialogueBeforeDecision:
+        - sentences:
+          - "There you are again. If you have two tokens, you can choose to leave.\r"
+          name: Park ranger
+        dialogueMoreThen2:
+          sentences:
+          - You got more than 2 tokens, choose one to remove.
+          name: 
+        dialogueEqualTo2:
+          sentences: []
+          name: 
+        dialogueLessThen2:
+          sentences:
+          - "Oh looks like you haven\u2019t found two memories to keep and cherish."
+          - I think you need to go back and explore some more.
+          name: Park ranger
+        WhetherNextLevel:
+          dialogueBeforeDecision:
+          - sentences:
+            - Are you sure you dont want to explore som more?
+            name: Park ranger
+          dialogueWhileDecision:
+            sentences:
+            - If you leave the park now these are the two memories you will keep
+              forever.
+            name: Park ranger
+          dialogueAfterYesDecision:
+          - sentences:
+            - Exit
+            name: 
+          dialogueAfterNoDecision:
+          - sentences:
+            - Go back to the park.
+            name: 
+        removeItem:
+          dialogueBeforeSubmission: []
+          dialogueWhileSubmission:
+            sentences:
+            - Select 1-5 to remove
+            name: 
+          dialoguewithPassing:
+          - sentences:
+            - Removed.
+            name: 
+          dialoguewithWrongItem: []
+          dialogueWithoutSubmitting: []
+          itemRequired: {fileID: 0}
+          remove: 1
+    - rid: 7610262513221107721
+      type: {class: DialogueEvent, ns: , asm: Assembly-CSharp}
+      data:
+        dialogues:
+        - sentences:
+          - Hey welcome to the park! Good to see you again!
+          name: Park Ranger
+        - sentences:
+          - "Hey, Likewise.\r"
+          name: You
+        - sentences:
+          - "You look a bit troubled today, how are things?\r"
+          name: Park Ranger
+        - sentences:
+          - "Well, I\u2019we been better, Me and XX just broke up."
+          name: You
+        - sentences:
+          - "Oh, I\u2019m so sorry to hear. A stroll in the park will do you good."
+          - "Breath in some fresh air, clear your thoughts\r.\n"
+          name: Park Ranger
+        - sentences:
+          - Yeah I guess.
+          name: You
+        - sentences:
+          - 'I know your head is probaboy filled with questions and thoughts at this
+            point. '
+          - A walk in this park has helped many make sense of whats troubling them.
+          - "And I\u2019m sure it can help you too."
+          name: Park Ranger
+        - sentences:
+          - "Yeah a walk is always good I guess, or, how do you mean?\r"
+          name: You
+        - sentences:
+          - 'Well this park is field with memories. '
+          - "To find answers to that burning question you have inside, you need to 
+            look inside, look back, remember, and reflect. This is the perfect place
+            to do so. \r"
+          - "You need to identify what  memory fragments are actually  important, 
+            and you need to let go of the ones that won\u2019t help you on your journey.
+            That\u2019s the only way you will find answers."
+          name: Park Ranger
+        - sentences:
+          - "Okay.. I mean, Thank you for the advice. \r"
+          name: You
+        - sentences:
+          - "Don\u2019t thank me just yet."
+          - This park hides all sort of things. Once you've explored it all and feel
+            ready, come meet me again right here at the park entrance.
+          name: Park Ranger
 --- !u!1 &1085182701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3201138529541993511, guid: 7175fe6e56c60c44c8a9ee462bdf43fa, type: 3}
@@ -12881,11 +13140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.795
+      value: 3.062
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.892
+      value: -5.465
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12953,7 +13212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235783690332714134, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_Name
-      value: Test (1)
+      value: Decision
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 169288187213658989, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
@@ -13183,6 +13442,7 @@ Transform:
   - {fileID: 419889173}
   - {fileID: 369072142}
   - {fileID: 882655108}
+  - {fileID: 1067504474}
   - {fileID: 2079825167}
   - {fileID: 785671690}
   - {fileID: 1976819658}
@@ -93563,11 +93823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.466
+      value: 5.152
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.369
+      value: -1.579
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.z

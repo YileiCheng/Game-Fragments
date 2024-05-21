@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class SubmitItem : Event
 {
     public List<Dialogue> dialogueBeforeSubmission;
@@ -10,12 +11,11 @@ public class SubmitItem : Event
     public List<Dialogue> dialoguewithWrongItem;
     public List<Dialogue> dialogueWithoutSubmitting;
     public Item itemRequired;
+    public bool remove;
 
     private DialogueManagerNew manager;
     private int nextSeq;
     private NPCInteraction interaction;
-
-    bool accepted;
 
     public SubmitItem() : base(EventType.SubmitItemEvent)
     {
@@ -27,10 +27,8 @@ public class SubmitItem : Event
         interaction = npcInteraction;
         manager = dialogueManager;
 
-        foreach (Dialogue dialogue in dialogueBeforeSubmission)
-        {
-            manager.StartDialogue(dialogue);
-        }
+        manager.addDialogueList(dialogueBeforeSubmission);
+
         manager.StartSubmission(this);
     }
 
@@ -44,32 +42,40 @@ public class SubmitItem : Event
             {
                 Player player = playerGameObject.GetComponent<Player>();
                 Item item = player.inventory.GetItemfromKey(index);
-                if(item.type == itemRequired.type)
+                if (!remove)
                 {
-                    foreach (Dialogue dialogue in dialoguewithPassing)
+                    if (item.type == itemRequired.type)
                     {
-                        manager.StartDialogue(dialogue);
+                        manager.addDialogueList(dialoguewithPassing);
+
+                        interaction.UpdateSeq(nextSeq + 1);
+                        player.inventory.RemoveItemfromKey(index);
                     }
-                    interaction.UpdateSeq(nextSeq + 1);
-                    player.inventory.RemoveItemfromKey(index);
+                    else
+                    {
+                        manager.addDialogueList(dialoguewithWrongItem);
+                    }
                 }
                 else
                 {
-                    foreach (Dialogue dialogue in dialoguewithWrongItem)
+                    if (item != null)
                     {
-                        manager.StartDialogue(dialogue);
+                        manager.addDialogueList(dialoguewithPassing);
+                        player.inventory.RemoveItemfromKey(index);
+                    }
+                    else
+                    {
+                        manager.addDialogueList(dialogueWithoutSubmitting);
                     }
                 }
+
             }
 
 
         }
         else
         {
-            foreach (Dialogue dialogue in dialogueWithoutSubmitting)
-            {
-                manager.StartDialogue(dialogue);
-            }
+            manager.addDialogueList(dialogueWithoutSubmitting);
         }
     }
 }
