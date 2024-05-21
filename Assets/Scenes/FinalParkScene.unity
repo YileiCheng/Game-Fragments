@@ -3089,7 +3089,7 @@ MonoBehaviour:
           name: 
         dialoguewithPassing:
         - sentences:
-          - (DOGGYNAME)! Thank you so much for finding him!
+          - Tia! Thank you so much for finding him!
           - Ever since my husband died he is all i got left!
           - Remember to always value the time together with your loved ones, it is
             always to short and neglected.
@@ -3707,7 +3707,7 @@ Transform:
   m_GameObject: {fileID: 439515181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7621884, y: -2.0330703, z: 0.009168929}
+  m_LocalPosition: {x: -0.754, y: -1.453, z: 0.009168929}
   m_LocalScale: {x: 0.1759, y: 0.1669, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9227,7 +9227,7 @@ Transform:
   m_GameObject: {fileID: 996761499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.079, y: -7.241, z: -2.65}
+  m_LocalPosition: {x: 1.94, y: -7.66, z: -2.65}
   m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10711,7 +10711,7 @@ MonoBehaviour:
           - "You look a bit troubled today, how are things?\r"
           name: Park Ranger
         - sentences:
-          - "Well, I\u2019we been better, Me and XX just broke up."
+          - "Well, I\u2019we been better, me and XX just broke up."
           name: You
         - sentences:
           - "Oh, I\u2019m so sorry to hear. A stroll in the park will do you good."
@@ -10731,10 +10731,10 @@ MonoBehaviour:
           name: You
         - sentences:
           - 'Well this park is field with memories. '
-          - "To find answers to that burning question you have inside, you need to 
+          - "To find answers to that burning question you have inside, you need to
             look inside, look back, remember, and reflect. This is the perfect place
             to do so. \r"
-          - "You need to identify what  memory fragments are actually  important, 
+          - "You need to identify what  memory fragments are actually  important,
             and you need to let go of the ones that won\u2019t help you on your journey.
             That\u2019s the only way you will find answers."
           name: Park Ranger
@@ -93741,11 +93741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.96
+      value: -2.941
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6
+      value: -2.028
       objectReference: {fileID: 0}
     - target: {fileID: 1273640498687695034, guid: 6c63183119b1c4d24a67710ae449824f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93823,11 +93823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.152
+      value: 5.686
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.579
+      value: -1.247
       objectReference: {fileID: 0}
     - target: {fileID: 7820144415925044009, guid: 80ed6a770e97c4dd7ad159c1be98f565, type: 3}
       propertyPath: m_LocalPosition.z
