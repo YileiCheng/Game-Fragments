@@ -37,7 +37,12 @@ public class NPCInteractionEditor : Editor
         {
             script.events.Add(new DefaultEvent());
         }
-        
+
+        if (GUILayout.Button("Next Level Event"))
+        {
+            script.events.Add(new NextLevel());
+        }
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(target);

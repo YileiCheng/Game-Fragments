@@ -24,8 +24,10 @@ public class DialogueManagerNew : MonoBehaviour
 
     private SubmitItem currentSubmission;
     private Decision currentDecision;
+    private NextLevel nextLevelEvent;
     private bool whileDecision;
     private bool whileSubmission;
+    private bool whileNextLevel;
     private int selectItem = -1;
 
     void Start()
@@ -128,6 +130,12 @@ public class DialogueManagerNew : MonoBehaviour
         }
 
     }
+    public void StartNextLevel(NextLevel nextLevel)
+    {
+        //currentDecision = nextLevel;
+        //dialogueQueue.Enqueue(currentDecision.dialogueWhileDecision);
+        //whileDecision = true;
+    }
 
     public void StartDecision(Decision decisionEvent)
     {
@@ -135,6 +143,7 @@ public class DialogueManagerNew : MonoBehaviour
         dialogueQueue.Enqueue(currentDecision.dialogueWhileDecision);
         whileDecision = true;
     }
+
 
     public void StartSubmission(SubmitItem submitItem)
     {

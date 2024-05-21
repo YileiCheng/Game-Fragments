@@ -11,7 +11,8 @@ public abstract class Event
         DecisionEvent,
         SubmitItemEvent,
         ReceiveItemEvent,
-        DefaultEvent
+        DefaultEvent,
+        Nextlevel
     }
 
     public EventType Type { get; private set; }
