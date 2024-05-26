@@ -12,6 +12,7 @@ public class NPCInteraction : MonoBehaviour
 
     bool detect_player = false;
     int currentIndex = 0;
+    bool hasLoggedEndGame = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class NPCInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // method 1
+         //method 1
         if (Input.GetKeyDown(KeyCode.E) && detect_player && events.Count > currentIndex)
         {
             Event currentEvent = events[currentIndex];
@@ -34,26 +35,16 @@ public class NPCInteraction : MonoBehaviour
 
         }
 
-        // original
-        //if (detect_player && Input.GetKeyDown(KeyCode.E))
-        //{
-        //    Debug.Log("trying to trigger dialogue");
-        //    TriggerDialogue();
-
-        //    // add the item at the end of dialogue
-        //    //GameObject playerGameObject = GameObject.Find("Player");
-        //    //if (playerGameObject != null)
-        //    //{
-        //    //    Player player = playerGameObject.GetComponent<Player>();
-        //    //    player.inventory.AddfromItem(item);
-        //    //}
-
-        //    detect_player = false;
-        //    if (gameObject.CompareTag("Fragment"))
-        //    {
-        //        gameObject.SetActive(false);
-        //    }
-        //}
+        if (!hasLoggedEndGame && events.Count > 0 && currentIndex == events.Count)
+        {
+            var lastEvent = events[events.Count - 1];
+            if (lastEvent.GetType() == typeof(NextLevel))
+            {
+                // Add here
+                Debug.Log("end game");
+                hasLoggedEndGame = true;
+            }
+        }
 
     }
 
