@@ -28,7 +28,7 @@ public class NPCInteraction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && detect_player && events.Count > currentIndex)
         {
             Event currentEvent = events[currentIndex];
-            Debug.Log("press e");
+            //Debug.Log("press e");
 
             currentEvent.Execute(currentIndex, FindObjectOfType<DialogueManagerNew>(), this);
             
@@ -43,7 +43,7 @@ public class NPCInteraction : MonoBehaviour
             {
                 // Add here
                 UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
-                Debug.Log("end game");
+                //Log("end game");
                 hasLoggedEndGame = true;
             }
         }
@@ -55,7 +55,7 @@ public class NPCInteraction : MonoBehaviour
         
         if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player detected");
+            //Debug.Log("player detected");
             detect_player = true;
         }
         
@@ -77,6 +77,6 @@ public class NPCInteraction : MonoBehaviour
     public void UpdateSeq(int newIndex)
     {
         currentIndex = newIndex;
-        Debug.Log("Updated sequence to: " + currentIndex);
+        //Log("Updated sequence to: " + currentIndex);
     }
 }

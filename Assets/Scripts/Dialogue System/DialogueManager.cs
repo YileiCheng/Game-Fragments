@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("1 DialogueBox GameObject not found in the scene with the 'DialogueBox' tag.");
+            //Debug.LogError("1 DialogueBox GameObject not found in the scene with the 'DialogueBox' tag.");
         }
         textDia.text = string.Empty;
     }
@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             
-            Debug.Log("here i am");
+            //g.Log("here i am");
             if (sentences.Count > 0)
             {
                 if(diaCount == 0)
@@ -89,7 +89,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(true);
         name.text = dialogue.name;
-        Debug.Log("starting conversation with: " + dialogue.name);
+        //g.Log("starting conversation with: " + dialogue.name);
         sentences.Clear();
         foreach (string s in dialogue.sentences)
         {

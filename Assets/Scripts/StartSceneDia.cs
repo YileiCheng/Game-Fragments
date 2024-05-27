@@ -27,7 +27,7 @@ public class StartSceneDia : MonoBehaviour
         }
         if (!textBox.activeSelf)
         {
-            Debug.Log("uhhhh");
+           
             nextSceneButton.SetActive(true);
         }
 
