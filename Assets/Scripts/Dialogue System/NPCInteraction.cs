@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCInteraction : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class NPCInteraction : MonoBehaviour
             if (lastEvent.GetType() == typeof(NextLevel))
             {
                 // Add here
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
                 Debug.Log("end game");
                 hasLoggedEndGame = true;
             }

@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalParkScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: edefd5d9fe82b4b15bdd36b34e1795c4
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 17405736c4a2c4dc996ee211e57e9d96
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 9584a427792d34270aa4e2cf4e74d3dd
   m_configObjects: {}
